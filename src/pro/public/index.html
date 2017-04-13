@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+
+<h1>this is an index page for test!</h1>
+<div id="console"/>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script>
+    $(function(){
+        $.ajax({
+            method : 'GET',
+            url : 'hello',
+            headers :{
+                'service-name':'helloService'
+            },
+            success: function(data){
+                $('#console').text(data);
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>
